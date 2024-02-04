@@ -134,7 +134,7 @@ const getAll = async (req, res) => {
       });
   }
   try {
-    const users = await User.find({ is_admin: false });
+    const users = await User.find({ is_admin: false }).select('-password');
     return res.status(200).json({ users });
   } catch (error) {
     console.error(error);
@@ -150,7 +150,7 @@ const getById = async (req, res) => {
   }
   try {
     const userId = req.params.id;
-    const user = await User.findById(userId);
+    const user = await User.findById(userId).select('-password');
 
     if (!user) {
       return res.status(404).json({ message: "Responsable non trouvé." });

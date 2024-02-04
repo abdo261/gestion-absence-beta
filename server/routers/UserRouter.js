@@ -35,14 +35,14 @@ UserRouter.delete('/remove/:id',isAuth,remove)
  * @access private (admin)
  * @descreption get all responsable_user 
  */
-UserRouter.get('/all',isAuth,getAll)
+UserRouter.get('/responsables',isAuth,getAll)
 /**
  * @method get
  * @route /api/user/one/:id
  * @access private (admin)
  * @descreption get one responsable_user 
  */
-UserRouter.get('/one/:id',isAuth,getById)
+UserRouter.get('/responsables/:id',isAuth,getById)
 
 
 module.exports = UserRouter

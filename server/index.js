@@ -14,9 +14,11 @@ app.use(express.json())
 
 //import routers
 const userRouter = require('./routers/UserRouter')
+const communeRouter = require('./routers/CommuneRouter')
 
 //end point 
-app.use('/api/user',userRouter)
+app.use('/api/users',userRouter)
+app.use('/api/communes',communeRouter)
 
 //app listen
 app.listen(PORT,()=>console.log(`server raning good in port ${PORT}`))
