@@ -19,7 +19,7 @@ const validateCreateCommune = (obj) => {
       .string()
       .trim()
       .min(3)
-      .pattern(/^[a-zA-Z][-_é' a-zA-Z()]*$/)
+      .pattern(/^[a-zA-Z][-_é' èàça-zA-Z()]*$/)
       .required(),
   });
   return communeSchema.validate(obj);

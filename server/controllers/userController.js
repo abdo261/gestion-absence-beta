@@ -20,7 +20,7 @@ const create = async (req, res) => {
       return res.status(400).json({ message: error.details[0].message });
     const user = await User.findOne({ email: req.body.email });
     if (user)
-      return res.status(404).json({ message: "Responsable déjà existant" });
+      return res.status(400).json({ message: "Responsable déjà existant" });
     const hashPass = await bcryptjs.hash(req.body.password, Number(POWER_HASH));
     const newUser = new User({ ...value, password: hashPass });
     await newUser.save();
