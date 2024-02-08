@@ -1,0 +1,61 @@
+.sidenav {
+  width: 240px;
+  background: #011627;
+  position: absolute;
+  height: calc(100vh - 95px);
+  padding: 0 30px;
+  transition: all 1s;
+}
+.logo-container {
+  display: flex;
+  align-items: start;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.logo-text p {
+  margin: 0%;
+  padding: 0%;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.logo {
+  width: 50px;
+}
+ul {
+  padding: 0;
+  margin-top: 40px;
+}
+ul li {
+  list-style-type: none;
+}
+ul li a,
+.logout-container a {
+  color: #eaecef;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: block;
+  align-items: baseline;
+
+  font-weight: 500;
+  font-size: 18px;
+}
+ul li a:hover,
+ul li a.active,
+.logout-container a:hover {
+  background-color: #172b4d;
+}
+ul li a span,
+.logout-container a span {
+  margin-left: 10px;
+}
+.logout-container {
+  position: absolute;
+  bottom: 10px;
+}
